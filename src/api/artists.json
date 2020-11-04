@@ -1,0 +1,17 @@
+[
+  {
+    "name":"artist z",
+  "photoUrl":"urlz.com",
+  "birthdate":1970,
+  "deathDate": 2022},
+  {
+     "name":"artist y",
+  "photoUrl":"urly.com",
+  "birthdate":1980,
+  "deathDate": 2021},
+  {
+    "name":"artist y",
+    "photoUrl":"urly.com",
+    "birthdate":1990,
+    "deathDate": 2020}
+]

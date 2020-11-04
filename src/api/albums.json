@@ -1,0 +1,24 @@
+[
+  {
+    "title":"album uno",
+    "artistID":"artist x",
+    "coverUrl": "url.com",
+    "year":1930,
+    "genre":"rock"
+
+  },
+  {
+    "title":"album 2",
+    "artistID":"artist y",
+    "coverUrl": "url2.com",
+    "year":1940,
+    "genre":"jazz"
+  },
+  {
+    "title":"album 3",
+    "artistID":"artist z",
+    "coverUrl": "url3.com",
+    "year":1950,
+    "genre":"Pop"
+  }
+]

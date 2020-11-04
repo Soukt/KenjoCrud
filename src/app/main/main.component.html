@@ -1,0 +1,24 @@
+
+
+<ul class="cards">
+  <li *ngFor='let artist of artistList' class="cards__item">
+    <div class="card">
+      <img [src]="artist.photoUrl" alt="">
+      <div class="card__content">
+        <div class="card__title">{{artist.name}}</div>
+        <p>{{artist.deathDate}}</p>
+        <p>{{artist.birthdate}}</p>
+        <p>{{artist._id}}</p>
+        <p>{{artist._createdAt}}</p>
+        <p>{{artist._updatedAt}}</p>
+        <div class='buttons'>
+          <button class='btn btn-outline-secondary'>Edit</button>
+          <button class='btn btn-outline-danger'>X</button>
+        </div>
+
+      </div>
+    </div>
+  </li>
+
+
+</ul>
