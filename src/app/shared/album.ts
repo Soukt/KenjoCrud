@@ -5,23 +5,20 @@ export class Album {
   // required: true
   // database id
 
-  name:	string;
+  title:	string;
   // required: true
   // name of the artist or band. Note that the database will not allow duplicates of this value
 
-  photoUrl	:string;
+  coverUrl	:string;
   // ($url)
   // url link to a photo or picture of the artist
 
-  birthdate:number;
+  year:number;
   // minimum: 1909-01-01T00:00:00.000Z
   // maximum: 2030-12-31T00:00:00.000Z
   // year when the artist was born or the band was created
 
-  deathDate:number;
-  // minimum: 1909-01-01T00:00:00.000Z
-  // maximum: 2030-12-31T00:00:00.000Z
-  // year when the artist died or the band split up
+  genre:string;
 
   _createdAt:	string;
   // ($date-time)

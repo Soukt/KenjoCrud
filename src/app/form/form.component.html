@@ -1,1 +1,19 @@
-<p>form works!</p>
+<div class="formContainer">
+
+  <form action="">
+    Name
+  <input type="text" required=true >
+  Birth Year
+  <input type='number'>
+  Death Year
+  <input type='number'>
+  Url
+  <input type="text" >
+<h1>{{parametro}}</h1>
+
+<button *ngIf="parametro" (click)="clickUpdateArtist(parametro)">Save</button>
+<button *ngIf="!parametro" (click)="clickAddArtist()">Add</button>
+  </form>
+
+
+</div>

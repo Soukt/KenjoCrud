@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailArtistComponent } from './detail-artist.component';
+import { MainAlbumComponent } from './main-album.component';
 
-describe('DetailArtistComponent', () => {
-  let component: DetailArtistComponent;
-  let fixture: ComponentFixture<DetailArtistComponent>;
+describe('MainAlbumComponent', () => {
+  let component: MainAlbumComponent;
+  let fixture: ComponentFixture<MainAlbumComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailArtistComponent ]
+      declarations: [ MainAlbumComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailArtistComponent);
+    fixture = TestBed.createComponent(MainAlbumComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

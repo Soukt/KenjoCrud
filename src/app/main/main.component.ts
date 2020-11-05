@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import {Album} from "../shared/album"
 import {Artist} from "../shared/artist"
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -9,86 +10,31 @@ import {Artist} from "../shared/artist"
 export class MainComponent implements OnInit {
   pageTitle:string= "MainBody"
   albumList:Album[];
-  artistList:Artist[]=[
-    {
-      "_id": "id",
-      "_createdAt":"createdField",
-      "_updatedAt":"updateField",
 
-      "name":"Elvis Presley",
-    "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg","birthdate":1980,
-    "deathDate": 2022},
-    {
-       "name":"Ringo",
-    "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-    "birthdate":1980,
-    "deathDate": 2021,"_id": "id",
-    "_createdAt":"createdField",
-    "_updatedAt":"updateField"},
+  artistList:Artist[];
 
-    {
-      "name":"AcDc",
-      "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-      "birthdate":1990,
-      "deathDate": 2020,
-      "_id": "id",
-      "_createdAt":"createdField",
-      "_updatedAt":"updateField",},{
-        "name":"AcDc",
-        "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-        "birthdate":1990,
-        "deathDate": 2020,
-        "_id": "id",
-        "_createdAt":"createdField",
-        "_updatedAt":"updateField",},{
-          "name":"AcDc",
-          "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-          "birthdate":1990,
-          "deathDate": 2020,
-          "_id": "id",
-          "_createdAt":"createdField",
-          "_updatedAt":"updateField",},{
-            "name":"AcDc",
-            "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-            "birthdate":1990,
-            "deathDate": 2020,
-            "_id": "id",
-            "_createdAt":"createdField",
-            "_updatedAt":"updateField",},{
-              "name":"AcDc",
-              "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-              "birthdate":1990,
-              "deathDate": 2020,
-              "_id": "id",
-              "_createdAt":"createdField",
-              "_updatedAt":"updateField",},{
-                "name":"AcDc",
-                "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-                "birthdate":1990,
-                "deathDate": 2020,
-                "_id": "id",
-                "_createdAt":"createdField",
-                "_updatedAt":"updateField",},{
-      "name":"AcDc",
-      "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-      "birthdate":1990,
-      "deathDate": 2020,
-      "_id": "id",
-      "_createdAt":"createdField",
-      "_updatedAt":"updateField",},{
-      "name":"AcDc",
-      "photoUrl":"https://mexico.as.com/mexico/imagenes/2019/08/16/tikitakas/1565975021_713225_1565975140_noticia_normal.jpg",
-      "birthdate":1990,
-      "deathDate": 2020,
-      "_id": "id",
-      "_createdAt":"createdField",
-      "_updatedAt":"updateField",}
-  ]
-  ;
+  constructor(private dataService: DataService) { }
+   deleteClick(idArtist):void{
+     console.log(idArtist);
+     let artist
+      this.dataService.getArtist(idArtist).subscribe((data:Artist)=>{
 
-  constructor() { }
+          if(confirm("estas seguro de que quieres borrar a "+data.name))
+        this.dataService.deleteArtist(data._id).subscribe((removed)=> console.log(removed))
+window.location.reload();
+      }
 
+
+     );
+   }
   ngOnInit(): void {
+    this.dataService.getAllAlbums().subscribe((data: any[])=>{
+
+      this.albumList = data;
+
+    })
+    this.dataService.getAllArtists().subscribe((data:Artist[])=>{
+      this.artistList = data;})
   }
 
 }

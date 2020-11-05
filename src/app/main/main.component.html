@@ -6,14 +6,19 @@
       <img [src]="artist.photoUrl" alt="">
       <div class="card__content">
         <div class="card__title">{{artist.name}}</div>
-        <p>{{artist.deathDate}}</p>
-        <p>{{artist.birthdate}}</p>
-        <p>{{artist._id}}</p>
-        <p>{{artist._createdAt}}</p>
-        <p>{{artist._updatedAt}}</p>
+        artist deathdate
+        <p>{{artist.deathDate |date :'yyyy' }}</p>
+        artist birthdate
+        <p>{{artist.birthdate |date:'yyyy'}}</p>
+        artist id
+        <p>{{artist._id | uppercase}}</p>
+        artist created at
+        <p>{{artist._createdAt |date :'yyyy'}}</p>
+        artist update at
+        <p>{{artist._updatedAt |date:'yyyy'}}</p>
         <div class='buttons'>
-          <button class='btn btn-outline-secondary'>Edit</button>
-          <button class='btn btn-outline-danger'>X</button>
+          <button class='btn btn-outline-secondary' routerLink='/editArtist/{{artist._id}}'>Edit</button>
+          <button class='btn btn-outline-danger' (click)='deleteClick(artist._id)'>X</button>
         </div>
 
       </div>
