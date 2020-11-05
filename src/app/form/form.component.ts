@@ -9,46 +9,48 @@ import { Artist } from '../shared/artist';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  pageTitle:string="Add Artist"
   parametro:string;
+  artistToUpdate:any;
+  artistToBe={
+    name:"",
+    birthdate:"",
+    deathDate:"",
+    photoUrl:""
+  }
+
   constructor(private route: ActivatedRoute,private dataService: DataService) { }
   clickUpdateArtist(id){
-    console.log("estas intentando añadir un artista")
-    let artista={
-      "name":"pedro sanchez",
-      "photoUrl":"https://www.biography.com/.image/t_share/MTQ3NjM5MTEzMTc5MjEwODI2/eminem_photo_by_dave_j_hogan_getty_images_entertainment_getty_187596325.jpg",
-      "birthdate":1990,
-      "deathDate": 2020}
-      this.dataService.updateArtist(id, artista).subscribe(((data:Artist)=>console.log("artista updateado")))
+    console.log(id)
+        this.dataService.updateArtist(id, this.artistToBe).subscribe(((data:Artist)=>console.log("artista updateado")));
+        window.location.replace("")
   }
-  clickAddArtist():void{
-    console.log("estas intentando añadir un artista")
-    let artista={
-      "name":"m&m",
-      "photoUrl":"https://www.biography.com/.image/t_share/MTQ3NjM5MTEzMTc5MjEwODI2/eminem_photo_by_dave_j_hogan_getty_images_entertainment_getty_187596325.jpg",
-      "birthdate":1990,
-      "deathDate": 2020}
-      this.dataService.createArtist(artista).subscribe(((data:Artist)=>console.log("artista añadido")))
+
+  onKey(event) {
+    let field=event.target.name;
+
+    this.artistToBe[field]=event.target.value;
+    console.log(this.artistToBe);
   }
-// this.dataService.
-//   deleteClick(idArtist):void{
-//     console.log(idArtist);
-//     let artist
-//      this.dataService.getArtist(idArtist).subscribe((data:Artist)=>{
+  clickAddArtist(event):void{
+console.log(this.artistToBe);
 
-//          if(confirm("estas seguro de que quieres borrar a "+data.name))
-//        this.dataService.deleteArtist(data._id).subscribe((removed)=> console.log(removed))
-// window.location.reload();
-//      }
-
-
-//     );
-  // }
+    console.log("estas intentando añadir un artista");
+      // this.artistToBe.birth= new Date(this.artistToBe.birth)+"";
+      // this.artistToBe.death= new Date(this.artistToBe.death)+"";
+      console.log(this.artistToBe);
+       this.dataService.createArtist(this.artistToBe).subscribe(((data:Artist)=>console.log("artista añadido")));
+  }
 
 
 
 
   ngOnInit(): void {
-    this.parametro = this.route.snapshot.paramMap.get("id")
+    this.parametro = this.route.snapshot.paramMap.get("id");
+    if(this.parametro){this.pageTitle="Edit Artist"};
+
+
+
   }
 
 }

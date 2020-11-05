@@ -1,19 +1,29 @@
-<div class="formContainer">
-
-  <form action="">
-    Name
-  <input type="text" required=true >
-  Birth Year
-  <input type='number'>
-  Death Year
-  <input type='number'>
-  Url
-  <input type="text" >
-<h1>{{parametro}}</h1>
-
-<button *ngIf="parametro" (click)="clickUpdateArtist(parametro)">Save</button>
-<button *ngIf="!parametro" (click)="clickAddArtist()">Add</button>
-  </form>
 
 
-</div>
+<div  class="cards__item">
+  <div class="card">
+    <div class="card__content">
+      <div class="card__title">{{pageTitle}}</div>
+
+      <img src="https://i.pinimg.com/originals/c1/c8/cf/c1c8cf8a82b33f6d8d15de71d9e66fd7.jpg" alt="">
+      <form action="">
+
+
+        Name
+        <input name="name"type="text" required=true (keyup)="onKey($event)" >
+        <br>
+        Birth Year
+        <input type='text' name="birthdate" (keyup)="onKey($event)" >
+        <br>
+        Death Year
+        <input type='text' name="deathDate" (keyup)="onKey($event)" >
+        <br>
+        Url
+        <input type="text" name="photoUrl" (keyup)="onKey($event)" >
+        <br>
+        <button *ngIf="parametro" (click)="clickUpdateArtist(parametro)" class="formBtn">Save</button>
+        <button *ngIf="!parametro" (click)="clickAddArtist($event)" class="formBtn">Add</button>
+      </form>
+      </div>
+    </div>
+  </div>

@@ -7,7 +7,8 @@ import { FormComponent } from './form/form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormAlbumComponent } from './form-album/form-album.component';
-import { MainAlbumComponent } from './main-album/main-album.component'
+import { MainAlbumComponent } from './main-album/main-album.component';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MainAlbumComponent } from './main-album/main-album.component'
     NavbarComponent,
     FormAlbumComponent,
     MainAlbumComponent,
+    HeaderComponent,
 
 
   ],

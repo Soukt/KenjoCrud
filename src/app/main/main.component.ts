@@ -16,10 +16,10 @@ export class MainComponent implements OnInit {
   constructor(private dataService: DataService) { }
    deleteClick(idArtist):void{
      console.log(idArtist);
-     let artist
+     let artist;
       this.dataService.getArtist(idArtist).subscribe((data:Artist)=>{
 
-          if(confirm("estas seguro de que quieres borrar a "+data.name))
+          if(confirm("Yes, I want to delete "+data.name))
         this.dataService.deleteArtist(data._id).subscribe((removed)=> console.log(removed))
 window.location.reload();
       }
