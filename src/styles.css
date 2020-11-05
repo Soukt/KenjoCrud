@@ -43,7 +43,7 @@ img {
   text-transform: uppercase;
   margin-right: 40px;
   border: 0;
-  background-color: none;
+  background-color: nformPosone;
   padding: 0 15 0 15;
   color: white;
   background-color: transparent;
@@ -102,8 +102,12 @@ label {
   display: flex;
   width: 18vw;
   padding: 1rem;
+  justify-content: center;
 }
-.formPos {
+.cardCenter {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
 }
 .card {
   background-color: white;
@@ -142,6 +146,7 @@ label {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin: 10px 0;
 }
 
 .card__text {

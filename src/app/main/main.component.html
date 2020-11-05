@@ -1,16 +1,14 @@
-
-
 <ul class="cards">
   <li *ngFor='let artist of artistList' class="cards__item">
     <div class="card">
       <img [src]="artist.photoUrl" alt="">
       <div class="card__content">
         <div class="card__title"><strong>{{artist.name}}</strong></div>
+        <strong>Born</strong>
+        <p>{{artist.birthdate |date:'yyyy'}}</p>
         <strong> Died
         </strong>
         <p>{{artist.deathDate |date :'yyyy' }}</p>
-        <strong>Born</strong>
-        <p>{{artist.birthdate |date:'yyyy'}}</p>
         <strong>Artist id </strong>
         <p>{{artist._id | uppercase}}</p>
         <strong> Artist created at</strong>
