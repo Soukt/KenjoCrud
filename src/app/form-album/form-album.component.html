@@ -1,18 +1,37 @@
-<div class="formContainer">
+<div class="cards__item">
+  <div class="card">
+    <div class="card__content">
+      <div class="card__title">Add Album</div>
 
-  <form action="">
-    Name
-  <input type="text" required=true >
-  Release Date
-  <input type='number'>
-  Name of the artist
-  <input type='text'>
-  Url
-  <input type="text" >
-  genre
-  <input type="text">
-<button (click)='addAlbum()'>Save</button>
-  </form>
+      <img src="https://i.blogs.es/2201b1/record/1366_2000.jpg" alt="">
+      <form class="addElementForm">
+        <fieldset class="form-group">
+          <label for="name">Name</label>
 
 
+          <input name="name" type="text" required=true class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="year">Year of birth</label>
+
+          <input type='text' name="birthdate" class="form-control">
+        </fieldset>
+
+
+        <fieldset class="form-group">
+
+          <label for="deathDate"> Died</label>
+          <input type='text' name="deathDate" class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="photoUrl"> Url</label>
+          <input type="text" name="photoUrl" class="form-control">
+
+        </fieldset>
+
+        <button class="formBtn btn">Save</button>
+
+      </form>
+    </div>
+  </div>
 </div>

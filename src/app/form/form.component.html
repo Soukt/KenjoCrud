@@ -1,35 +1,41 @@
-
-
-<div  class="cards__item">
+<div class="cards__item">
   <div class="card">
     <div class="card__content">
       <div class="card__title">{{pageTitle}}</div>
 
       <img src="https://i.pinimg.com/originals/c1/c8/cf/c1c8cf8a82b33f6d8d15de71d9e66fd7.jpg" alt="">
-      <form action="">
-        <strong>
-          Name</strong>
+      <form class="addElementForm formPos">
+
+        <fieldset class="form-group">
+          <label for="name">Name</label>
+          <input name="name" type="text" required=true (keyup)="onKey($event)" class="form-control">
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="birthDate"> Birth Year</label>
+
+          <input type='text' name="birthdate" (keyup)="onKey($event)" class="form-control">
+        </fieldset>
 
 
-        <input name="name"type="text" required=true (keyup)="onKey($event)" >
-        <br>
-        <strong>Birth Year</strong>
-
-        <input type='text' name="birthdate" (keyup)="onKey($event)" >
-        <br>
-
-        <strong> Death Year</strong>
-
-        <input type='text' name="deathDate" (keyup)="onKey($event)" >
-        <br>
-        <strong>Url:</strong>
+        <fieldset class="form-group">
+          <label for="deathDate">Died</label>
 
 
-        <input type="text" name="photoUrl" (keyup)="onKey($event)" >
-        <br>
-        <button *ngIf="parametro" (click)="clickUpdateArtist(parametro)" class="formBtn">Save</button>
-        <button *ngIf="!parametro" (click)="clickAddArtist($event)" class="formBtn">Add</button>
+          <input type='text' class="form-control" name="deathDate" (keyup)="onKey($event)">
+        </fieldset>
+
+        <fieldset class="form-group">
+
+          <label for="photoUrl">Url</label>
+
+          <input type="text" name="photoUrl" (keyup)="onKey($event)" class="form-control">
+
+        </fieldset>
+
+        <button *ngIf="parametro" (click)="clickUpdateArtist(parametro)" class="formBtn btn">Save</button>
+        <button *ngIf="!parametro" (click)="clickAddArtist($event)" class="formBtn 🌉 ">Add</button>
       </form>
-      </div>
     </div>
   </div>
+</div>

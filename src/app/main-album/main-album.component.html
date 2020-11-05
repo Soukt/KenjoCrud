@@ -5,16 +5,16 @@
     <div class="card">
       <img [src]="album.coverUrl" alt="">
       <div class="card__content">
-        <div class="card__title">{{album.title}}</div>
-       Release date
+        <div class="card__title"><strong>{{album.title}}</strong></div>
+        <strong>Released</strong>
         <p>{{album.year |date :'yyyy' }}</p>
 
         <!-- artist id
         <p>{{album.artist-id | uppercase}}</p> -->
-        artist created at
-        <p>{{album._createdAt |date :'yyyy'}}</p>
-        artist update at
-        <p>{{album._updatedAt |date:'yyyy'}}</p>
+        <strong>Created</strong>
+          <p>{{album._createdAt |date :'yyyy'}}</p>
+          <strong>Updated</strong>
+          <p>{{album._updatedAt |date:'yyyy'}}</p>
         <div class='buttons'>
           <button class='btn btn-outline-secondary'>Edit</button>
           <button class='btn btn-outline-danger'>X</button>
