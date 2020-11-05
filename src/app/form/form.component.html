@@ -7,18 +7,24 @@
 
       <img src="https://i.pinimg.com/originals/c1/c8/cf/c1c8cf8a82b33f6d8d15de71d9e66fd7.jpg" alt="">
       <form action="">
+        <strong>
+          Name</strong>
 
 
-        Name
         <input name="name"type="text" required=true (keyup)="onKey($event)" >
         <br>
-        Birth Year
+        <strong>Birth Year</strong>
+
         <input type='text' name="birthdate" (keyup)="onKey($event)" >
         <br>
-        Death Year
+
+        <strong> Death Year</strong>
+
         <input type='text' name="deathDate" (keyup)="onKey($event)" >
         <br>
-        Url
+        <strong>Url:</strong>
+
+
         <input type="text" name="photoUrl" (keyup)="onKey($event)" >
         <br>
         <button *ngIf="parametro" (click)="clickUpdateArtist(parametro)" class="formBtn">Save</button>

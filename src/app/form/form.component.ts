@@ -40,6 +40,7 @@ console.log(this.artistToBe);
       // this.artistToBe.death= new Date(this.artistToBe.death)+"";
       console.log(this.artistToBe);
        this.dataService.createArtist(this.artistToBe).subscribe(((data:Artist)=>console.log("artista añadido")));
+       window.location.replace("/");
   }
 
 

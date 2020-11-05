@@ -5,20 +5,23 @@
     <div class="card">
       <img [src]="artist.photoUrl" alt="">
       <div class="card__content">
-        <div class="card__title">{{artist.name}}</div>
-        artist deathdate
+        <div class="card__title"><strong>{{artist.name}}</strong></div>
+        <strong> Died
+        </strong>
         <p>{{artist.deathDate |date :'yyyy' }}</p>
-        artist birthdate
+        <strong>Born</strong>
         <p>{{artist.birthdate |date:'yyyy'}}</p>
-        artist id
+        <strong>Artist id </strong>
         <p>{{artist._id | uppercase}}</p>
-        artist created at
+        <strong> Artist created at</strong>
+
         <p>{{artist._createdAt |date :'yyyy'}}</p>
-        artist update at
+        <strong>Artist update at</strong>
+
         <p>{{artist._updatedAt |date:'yyyy'}}</p>
         <div class='buttons'>
-          <button class='btn btn-outline-secondary' routerLink='/editArtist/{{artist._id}}'>Edit</button>
-          <button class='btn btn-outline-danger' (click)='deleteClick(artist._id)'>X</button>
+          <button class='btn btn-outline-secondary customBtn' routerLink='/editArtist/{{artist._id}}'>Edit</button>
+          <button class='btn btn-outline-danger customBtn' (click)='deleteClick(artist._id)'>🗑 </button>
         </div>
 
       </div>
