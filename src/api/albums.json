@@ -1,24 +1,23 @@
 [
   {
-    "title":"album uno",
-    "artistID":"artist x",
-    "coverUrl": "url.com",
-    "year":1930,
-    "genre":"rock"
-
+      "title": "album 2",
+      "artistID": "artist y",
+      "coverUrl": "https://images-na.ssl-images-amazon.com/images/I/71DQrKpImPL._SY450_.jpg",
+      "year": 1940,
+      "genre": "jazz"
   },
   {
-    "title":"album 2",
-    "artistID":"artist y",
-    "coverUrl": "url2.com",
-    "year":1940,
-    "genre":"jazz"
+      "title": "album 3",
+      "artistID": "artist z",
+      "coverUrl": "https://cdn.pocket-lint.com/r/s/320x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image20-n78kgrw30d-jpg.webp?v1",
+      "year": 1950,
+      "genre": "Pop"
   },
   {
-    "title":"album 3",
-    "artistID":"artist z",
-    "coverUrl": "url3.com",
-    "year":1950,
-    "genre":"Pop"
+      "title": "album uno",
+      "artistID": "artist x",
+      "coverUrl": "https://cdn.pocket-lint.com/r/s/320x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image18-gs8jhoazrv.jpg?v1",
+      "year": 1930,
+      "genre": "rock"
   }
 ]

@@ -1,17 +1,37 @@
 [
   {
-    "name":"artist z",
-  "photoUrl":"urlz.com",
-  "birthdate":1970,
-  "deathDate": 2022},
+    "name": "Isabel Pantoja",
+    "birthdate": "1931-01-01T00:00:00.000Z",
+    "deathDate": "2023-01-01T00:00:00.000Z",
+    "photoUrl":
+      "https://www.hola.com/imagenes/actualidad/20201104178535/isabel-pantoja-silencio-enfrentamiento-kiko-rivera/0-885-226/isabel-pantoja3-t.jpg?filter=w600",
+  },
   {
-     "name":"artist y",
-  "photoUrl":"urly.com",
-  "birthdate":1980,
-  "deathDate": 2021},
+    "name": "Los Rolling",
+    "birthdate": "1959-01-01T00:00:00.000Z",
+    "deathDate": "2030-01-01T00:00:00.000Z",
+    "photoUrl":
+      "https://rtvc-assets-radionica3.s3.amazonaws.com/s3fs-public/styles/image_750x424/public/field/image/article/the-rolling-stones-radionica.jpg?itok=r6Zbyfj6",
+  },
   {
-    "name":"artist y",
-    "photoUrl":"urly.com",
-    "birthdate":1990,
-    "deathDate": 2020}
+    "name": "asdaasd",
+    "birthdate": "1959-01-01T00:00:00.000Z",
+    "deathDate": "2020-01-01T00:00:00.000Z",
+    "photoUrl":
+      "https://www.biography.com/.image/t_share/MTQ3NjM5MTEzMTc5MjEwODI2/eminem_photo_by_dave_j_hogan_getty_images_entertainment_getty_187596325.jpg",
+  },
+  {
+    "name": "elton john",
+    "birthdate": "1947-01-01T00:00:00.000Z",
+    "deathDate": "2020-01-01T00:00:00.000Z",
+    "photoUrl":
+      "https://upload.wikimedia.org/wikipedia/commons/3/3a/Elton_John_Cannes_2019.jpg",
+  },
+  {
+    "name": "elvis",
+    "birthdate": "1930-01-01T00:00:00.000Z",
+    "deathDate": "2000-01-01T00:00:00.000Z",
+    "photoUrl":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/YoungElvisPresley.jpg/270px-YoungElvisPresley.jpg",
+  }
 ]
